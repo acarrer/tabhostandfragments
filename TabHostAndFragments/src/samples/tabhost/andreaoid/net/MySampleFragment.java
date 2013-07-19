@@ -24,7 +24,7 @@ public class MySampleFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 
-        mView = inflater.inflate(R.layout.sample_fragment, container, false);
+        mView = inflater.inflate(R.layout.activity_my_sample_fragment, container, false);
         String sampleText = getArguments().getString("bString");
 
         TextView txtSampleText = (TextView) mView.findViewById(R.id.txtViewSample);
