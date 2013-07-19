@@ -9,27 +9,30 @@ import android.widget.TextView;
 
 public class MySampleFragment extends Fragment {
 
-    private static View mView;
+	private static View mView;
 
-    public static final MySampleFragment newInstance(String sampleText) {
-        MySampleFragment f = new MySampleFragment();
+	public static final MySampleFragment newInstance(String sampleText) {
+		MySampleFragment f = new MySampleFragment();
 
-        Bundle b = new Bundle();
-        b.putString("bString", sampleText);
-        f.setArguments(b);
+		Bundle b = new Bundle();
+		b.putString("bString", sampleText);
+		f.setArguments(b);
 
-    return f;
-    }
+		return f;
+	}
 
-    @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+	@Override
+	public View onCreateView(LayoutInflater inflater, ViewGroup container,
+			Bundle savedInstanceState) {
 
-        mView = inflater.inflate(R.layout.activity_my_sample_fragment, container, false);
-        String sampleText = getArguments().getString("bString");
+		mView = inflater.inflate(R.layout.activity_my_sample_fragment,
+				container, false);
+		String sampleText = getArguments().getString("bString");
 
-        TextView txtSampleText = (TextView) mView.findViewById(R.id.txtViewSample);
-        txtSampleText.setText(sampleText);
+		TextView txtSampleText = (TextView) mView
+				.findViewById(R.id.txtViewSample);
+		txtSampleText.setText(sampleText);
 
-        return mView;
-    }
+		return mView;
+	}
 }
