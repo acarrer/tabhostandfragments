@@ -20,6 +20,10 @@ import android.widget.TabHost.OnTabChangeListener;
 
 */
 
+/*
+ * Andrea, can you check this file, please?
+ */
+
 public class MainActivity extends FragmentActivity implements
 		OnTabChangeListener, OnPageChangeListener {
 
